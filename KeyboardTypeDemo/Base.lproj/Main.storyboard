@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardTypeDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keybard Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-LK-iL8">
+                                <rect key="frame" x="154.5" y="94" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2jt-af-Ctw">
+                                <rect key="frame" x="100" y="135" width="214" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oG4-29-HPF">
+                                <rect key="frame" x="0.0" y="189" width="414" height="216"/>
+                            </pickerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2jt-af-Ctw" firstAttribute="top" secondItem="Kak-LK-iL8" secondAttribute="bottom" constant="20" id="Etn-RP-t7l"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2jt-af-Ctw" secondAttribute="trailing" constant="100" id="I5y-aB-f5E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kak-LK-iL8" secondAttribute="trailing" constant="20" id="Kst-48-4Gz"/>
+                            <constraint firstItem="oG4-29-HPF" firstAttribute="top" secondItem="2jt-af-Ctw" secondAttribute="bottom" constant="20" id="YLx-EX-Z7Q"/>
+                            <constraint firstItem="Kak-LK-iL8" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ewG-b2-yaD"/>
+                            <constraint firstAttribute="trailing" secondItem="oG4-29-HPF" secondAttribute="trailing" id="qVU-Cm-Nai"/>
+                            <constraint firstItem="Kak-LK-iL8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="umP-Lt-Gxz"/>
+                            <constraint firstItem="Kak-LK-iL8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vHB-mP-MPh"/>
+                            <constraint firstItem="2jt-af-Ctw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="vX0-oZ-vEK"/>
+                            <constraint firstItem="oG4-29-HPF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xYf-hw-Axf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="accessoryView" destination="zli-KZ-jLt" id="bYY-br-epw"/>
+                        <outlet property="pickerView" destination="oG4-29-HPF" id="ZyD-dZ-dgb"/>
+                        <outlet property="textField" destination="2jt-af-Ctw" id="Qbd-yC-YMK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zli-KZ-jLt" customClass="DTInputAccessoryView" customModule="KeyboardTypeDemo" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGu-J9-N4J">
+                            <rect key="frame" x="0.0" y="36" width="414" height="44"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="40D-cO-Zs0"/>
+                                <barButtonItem title="Done" style="done" id="6p3-3d-YD2"/>
+                            </items>
+                        </toolbar>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="Hz6-Il-GhL"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="eGu-J9-N4J" firstAttribute="leading" secondItem="zli-KZ-jLt" secondAttribute="leading" id="Pcy-6d-GVa"/>
+                        <constraint firstItem="Hz6-Il-GhL" firstAttribute="bottom" secondItem="eGu-J9-N4J" secondAttribute="bottom" id="VpA-S1-y0f"/>
+                        <constraint firstAttribute="trailing" secondItem="eGu-J9-N4J" secondAttribute="trailing" id="jNe-iA-shF"/>
+                        <constraint firstItem="eGu-J9-N4J" firstAttribute="top" relation="greaterThanOrEqual" secondItem="zli-KZ-jLt" secondAttribute="top" id="kyf-lS-g13"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="doneItem" destination="6p3-3d-YD2" id="F4c-Gi-ZD0"/>
+                    </connections>
+                </view>
             </objects>
+            <point key="canvasLocation" x="139" y="138"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F211134426D8CBC40017855C /* UIKeyboardTypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211134326D8CBC40017855C /* UIKeyboardTypeExtension.swift */; };
+		F211134626D8D5020017855C /* DTInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F211134526D8D5020017855C /* DTInputAccessoryView.swift */; };
 		F2DA8EC326D8BDF100C4C818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA8EC226D8BDF100C4C818 /* AppDelegate.swift */; };
 		F2DA8EC526D8BDF100C4C818 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA8EC426D8BDF100C4C818 /* SceneDelegate.swift */; };
 		F2DA8EC726D8BDF100C4C818 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DA8EC626D8BDF100C4C818 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F211134326D8CBC40017855C /* UIKeyboardTypeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKeyboardTypeExtension.swift; sourceTree = "<group>"; };
+		F211134526D8D5020017855C /* DTInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTInputAccessoryView.swift; sourceTree = "<group>"; };
 		F2DA8EBF26D8BDF100C4C818 /* KeyboardTypeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyboardTypeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DA8EC226D8BDF100C4C818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F2DA8EC426D8BDF100C4C818 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		F2DA8EC126D8BDF100C4C818 /* KeyboardTypeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F211134326D8CBC40017855C /* UIKeyboardTypeExtension.swift */,
+				F211134526D8D5020017855C /* DTInputAccessoryView.swift */,
 				F2DA8EC226D8BDF100C4C818 /* AppDelegate.swift */,
 				F2DA8EC426D8BDF100C4C818 /* SceneDelegate.swift */,
 				F2DA8EC626D8BDF100C4C818 /* ViewController.swift */,
@@ -139,6 +145,8 @@
 			files = (
 				F2DA8EC726D8BDF100C4C818 /* ViewController.swift in Sources */,
 				F2DA8EC326D8BDF100C4C818 /* AppDelegate.swift in Sources */,
+				F211134426D8CBC40017855C /* UIKeyboardTypeExtension.swift in Sources */,
+				F211134626D8D5020017855C /* DTInputAccessoryView.swift in Sources */,
 				F2DA8EC526D8BDF100C4C818 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
