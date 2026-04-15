@@ -58,17 +58,27 @@ struct ContentView: View
                 
                 ForEach(self.keyboardStyles) {
                     
-                    Text($0.description).tag($0)
+                    Text($0.description)
+                        .tag($0)
                 }
             })
-            .onChange(of: self.keyboardStyle) {
-                
-                _, _ in
-                
-                self.isFouced = false
-                self.isFouced = true
-            }
+            .onChange(keyboardStyle: self.keyboardStyle, isFouced: self._isFouced)
             .pickerStyle(MenuPickerStyle())
+        }
+    }
+}
+
+private
+extension View
+{
+    func onChange(keyboardStyle: UIKeyboardType, isFouced: FocusState<Bool>) -> some View
+    {
+        self.onChange(of: keyboardStyle) {
+            
+            _, _ in
+            
+            isFouced.wrappedValue = false
+            isFouced.wrappedValue = true
         }
     }
 }
